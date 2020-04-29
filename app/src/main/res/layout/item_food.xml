@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/imageFood"
+        android:layout_width="150dp"
+        android:layout_height="120dp"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/textviewName"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textColor="#f20"
+        android:textSize="18sp"
+        android:layout_toRightOf="@id/imageFood"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxWidth="300dp"
+        android:text="Tên món ăn sadasdasdasdasdasdasd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/textviewPrice"
+        android:layout_below="@id/textviewName"
+        android:layout_marginLeft="10dp"
+        android:textStyle="italic"
+        android:textColor="#039BE5"
+        android:textSize="15sp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxWidth="300dp"
+        android:layout_toRightOf="@id/imageFood"
+        android:text="20.000 Đồng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/textviewPrice"
+        android:layout_marginLeft="10dp"
+        android:textStyle="italic"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxWidth="300dp"
+        android:layout_toRightOf="@id/imageFood"
+        android:text="Quận 10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
