@@ -17,11 +17,9 @@ import java.util.Set;
 
 public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodHolder> {
     private List<Food> mFoodList;
-
     public FoodAdapter(List<Food> mFoodList) {
         this.mFoodList = mFoodList;
     }
-
     @NonNull
     @Override
     public FoodHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -54,5 +52,4 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodHolder> {
             tvAddress = itemView.findViewById(R.id.textviewAddress);
         }
     }
-
 }
