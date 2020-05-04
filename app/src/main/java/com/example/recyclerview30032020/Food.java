@@ -4,10 +4,10 @@ public class Food {
     private String name;
     private String address;
     private Integer price;
-    private String image;
+    private Integer image;
     // Alt + insert
 
-    public Food(String name, String address, Integer price, String image) {
+    public Food(String name, String address, Integer price, Integer image) {
         this.name = name;
         this.address = address;
         this.price = price;
@@ -38,11 +38,11 @@ public class Food {
         this.price = price;
     }
 
-    public String getImage() {
+    public Integer getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(Integer image) {
         this.image = image;
     }
 }
