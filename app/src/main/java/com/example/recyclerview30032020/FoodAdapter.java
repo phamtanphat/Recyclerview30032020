@@ -17,6 +17,7 @@ import java.util.List;
 public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodHolder> {
     // Kieu du lieu dang mang la duoc
     private List<Food> mFoodList;
+    private OnItemClickAdapterListener mOnItemClickAdapterListener;
 
     public FoodAdapter(List<Food> mFoodList) {
         this.mFoodList = mFoodList;
@@ -58,15 +59,18 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodHolder> {
             tvName = itemView.findViewById(R.id.textviewName);
             tvPrice = itemView.findViewById(R.id.textviewPrice);
             tvAddress = itemView.findViewById(R.id.textviewAddress);
-            tvName.setOnClickListener(new View.OnClickListener() {
+            itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    Log.d("BBB","Layout position " + getLayoutPosition());
-//                    Khi muon lay index cua viewholder o vi tri hien tai :
-//                    Toast.makeText(v.getContext(), mFoodList.get(getLayoutPosition()).getName(), Toast.LENGTH_SHORT).show();
-
+//                    mFoodList.remove(getLayoutPosition());
+////                    notifyDataSetChanged();
+//                    notifyItemRemoved(getLayoutPosition());
+                    mOnItemClickAdapterListener.OnItemClickListener(getLayoutPosition());
                 }
             });
         }
+    }
+    public void setOnItemClickListener(OnItemClickAdapterListener mOnItemClickAdapterListener){
+        this.mOnItemClickAdapterListener = mOnItemClickAdapterListener;
     }
 }

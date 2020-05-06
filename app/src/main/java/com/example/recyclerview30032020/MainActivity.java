@@ -1,7 +1,6 @@
 package com.example.recyclerview30032020;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -45,25 +44,23 @@ public class MainActivity extends AppCompatActivity {
                 addNewFood();
             }
         });
+        mFoodAdapter.setOnItemClickListener(new OnItemClickAdapterListener() {
+            @Override
+            public void OnItemClickListener(int position) {
+                mFoods.remove(position);
+                mFoodAdapter.notifyItemRemoved(position);
+            }
+        });
     }
 
     private void addNewFood() {
-
-//        mFoodAdapter.notifyDataSetChanged();
-//        Log.d("BBB",mFoods.size() + "");
-        ArrayList<Food> foods = new ArrayList<>();
-        Food food = new Food(
-                "Mon an so " + count++,
-                "Quan " + new Random().nextInt(10) + 1,
-                new Random().nextInt(19001) + 10000,
-                R.drawable.hinh_mon_banh_khot
-        );
-        foods.add(food);
-        // Khi lam viec voi server gan du lieu tu server ve roi cap nhat
-        mFoods = foods;
+        mFoods.add(0,
+                new Food(
+                        "Mon an so " + count++,
+                        "Quan " + new Random().nextInt(10) + 1,
+                        new Random().nextInt(19001) + 10000,
+                        R.drawable.hinh_mon_banh_khot
+                ));
         mFoodAdapter.notifyDataSetChanged();
-        Log.d("BBB",mFoods.size() + "");
-
     }
-
 }
