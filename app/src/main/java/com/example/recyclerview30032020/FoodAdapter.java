@@ -61,19 +61,12 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodHolder> {
             tvName.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Log.d("BBB","Layout position " + getLayoutPosition());
+//                    Log.d("BBB","Layout position " + getLayoutPosition());
 //                    Khi muon lay index cua viewholder o vi tri hien tai :
-                    Toast.makeText(v.getContext(), "Textview Name", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(v.getContext(), mFoodList.get(getLayoutPosition()).getName(), Toast.LENGTH_SHORT).show();
 
                 }
             });
-        }
-        @Deprecated
-        public void showToast(int resId , Context context){
-            Toast.makeText(context, resId + "", Toast.LENGTH_SHORT).show();
-        }
-        public void showToast(String text , Context context){
-            Toast.makeText(context, text + "", Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         mRcvFood.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
         mRcvFood.setAdapter(mFoodAdapter);
 
+
+
     }
 
 }
