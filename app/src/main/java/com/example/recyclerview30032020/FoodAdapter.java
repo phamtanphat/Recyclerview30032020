@@ -1,10 +1,13 @@
 package com.example.recyclerview30032020;
 
+import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -55,6 +58,22 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodHolder> {
             tvName = itemView.findViewById(R.id.textviewName);
             tvPrice = itemView.findViewById(R.id.textviewPrice);
             tvAddress = itemView.findViewById(R.id.textviewAddress);
+            tvName.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.d("BBB","Layout position " + getLayoutPosition());
+//                    Khi muon lay index cua viewholder o vi tri hien tai :
+                    Toast.makeText(v.getContext(), "Textview Name", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+        }
+        @Deprecated
+        public void showToast(int resId , Context context){
+            Toast.makeText(context, resId + "", Toast.LENGTH_SHORT).show();
+        }
+        public void showToast(String text , Context context){
+            Toast.makeText(context, text + "", Toast.LENGTH_SHORT).show();
         }
     }
 }
